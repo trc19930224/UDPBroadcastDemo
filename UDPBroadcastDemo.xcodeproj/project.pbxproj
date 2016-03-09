@@ -15,6 +15,7 @@
 		227A07A81C8FB2A000EC6094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227A07A61C8FB2A000EC6094 /* LaunchScreen.storyboard */; };
 		227A07B31C8FB2A000EC6094 /* UDPBroadcastDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227A07B21C8FB2A000EC6094 /* UDPBroadcastDemoTests.m */; };
 		227A07BE1C8FB2A000EC6094 /* UDPBroadcastDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 227A07BD1C8FB2A000EC6094 /* UDPBroadcastDemoUITests.m */; };
+		97582CC9D76BD22D8E907E6E /* libPods-UDPBroadcastDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 864DD9C0669ADE1B02AB9032 /* libPods-UDPBroadcastDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		227A07B91C8FB2A000EC6094 /* UDPBroadcastDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDPBroadcastDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		227A07BD1C8FB2A000EC6094 /* UDPBroadcastDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPBroadcastDemoUITests.m; sourceTree = "<group>"; };
 		227A07BF1C8FB2A000EC6094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E28CCD9722AF418C1F6946 /* Pods-UDPBroadcastDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPBroadcastDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UDPBroadcastDemo/Pods-UDPBroadcastDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		4C9D64102035AB647C916EF0 /* Pods-UDPBroadcastDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPBroadcastDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-UDPBroadcastDemo/Pods-UDPBroadcastDemo.release.xcconfig"; sourceTree = "<group>"; };
+		864DD9C0669ADE1B02AB9032 /* libPods-UDPBroadcastDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDPBroadcastDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97582CC9D76BD22D8E907E6E /* libPods-UDPBroadcastDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				227A07B11C8FB2A000EC6094 /* UDPBroadcastDemoTests */,
 				227A07BC1C8FB2A000EC6094 /* UDPBroadcastDemoUITests */,
 				227A07961C8FB2A000EC6094 /* Products */,
+				3B284A9359062837EB82BA08 /* Pods */,
+				37813BC6A5AEC60613BBE16D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +147,23 @@
 			path = UDPBroadcastDemoUITests;
 			sourceTree = "<group>";
 		};
+		37813BC6A5AEC60613BBE16D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				864DD9C0669ADE1B02AB9032 /* libPods-UDPBroadcastDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B284A9359062837EB82BA08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28E28CCD9722AF418C1F6946 /* Pods-UDPBroadcastDemo.debug.xcconfig */,
+				4C9D64102035AB647C916EF0 /* Pods-UDPBroadcastDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 227A07C21C8FB2A000EC6094 /* Build configuration list for PBXNativeTarget "UDPBroadcastDemo" */;
 			buildPhases = (
+				CD9BA9396805C332F69A815E /* Check Pods Manifest.lock */,
 				227A07911C8FB2A000EC6094 /* Sources */,
 				227A07921C8FB2A000EC6094 /* Frameworks */,
 				227A07931C8FB2A000EC6094 /* Resources */,
+				B7AC10592C905733DD37184F /* Embed Pods Frameworks */,
+				6042B29BA2125B79196BF7D6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +291,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6042B29BA2125B79196BF7D6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UDPBroadcastDemo/Pods-UDPBroadcastDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7AC10592C905733DD37184F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UDPBroadcastDemo/Pods-UDPBroadcastDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD9BA9396805C332F69A815E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		227A07911C8FB2A000EC6094 /* Sources */ = {
@@ -411,6 +486,7 @@
 		};
 		227A07C31C8FB2A000EC6094 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28E28CCD9722AF418C1F6946 /* Pods-UDPBroadcastDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UDPBroadcastDemo/Info.plist;
@@ -422,6 +498,7 @@
 		};
 		227A07C41C8FB2A000EC6094 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C9D64102035AB647C916EF0 /* Pods-UDPBroadcastDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UDPBroadcastDemo/Info.plist;
@@ -498,6 +575,7 @@
 				227A07C41C8FB2A000EC6094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		227A07C51C8FB2A000EC6094 /* Build configuration list for PBXNativeTarget "UDPBroadcastDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +584,7 @@
 				227A07C71C8FB2A000EC6094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		227A07C81C8FB2A000EC6094 /* Build configuration list for PBXNativeTarget "UDPBroadcastDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +593,7 @@
 				227A07CA1C8FB2A000EC6094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
